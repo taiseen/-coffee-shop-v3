@@ -1,0 +1,50 @@
+.header {
+    position        : fixed;
+    top             : 0;
+    left            : 0;
+    right           : 0;
+    z-index         : 101;
+    padding         : 2rem 9%;
+    display         : flex;
+    align-items     : center;
+    justify-content : space-between;
+    box-shadow      : $boxShadow;
+    background-color: $white;
+
+    .logo {
+        @include fontStyle(2.5rem, $mainColor);
+
+        i {
+            padding-left: 0.5rem;
+        }
+    }
+
+    .navbar {
+        a {
+            margin  : 0 1rem;
+            position: relative;
+            @include fontStyle(2.4rem, $mainColor);
+
+            &:hover::after {
+                content         : "";
+                position        : absolute;
+                bottom          : -20%;
+                left            : 50%;
+                width           : 70%;
+                transform       : translateX(-50%);
+                height          : .3rem;
+                background-color: tomato;
+            }
+        }
+    }
+
+    .btn {
+        margin-top: 0;
+    }
+}
+
+#menuBtn {
+    display  : none;
+    cursor   : pointer;
+    @include fontStyle(3rem, $mainColor);
+}

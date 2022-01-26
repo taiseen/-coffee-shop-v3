@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap");
+/* 26 - Jan - 2022  */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  box-sizing: border-box;
+  font-family: 'Nunito', sans-serif;
+  transition: all .1s linear;
+  /* user-select    : none; */ }
+
+/*
+    100% / 16px = 6.25%
+    6.25% == 1px 
+
+    6.25% * 10 = 62.5% 
+    62.5% == 10px
+*/
+html {
+  font-size: 62.5%;
+  transition: font-size .5s linear;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 7rem; }
+  html::-webkit-scrollbar {
+    width: 1rem; }
+  html::-webkit-scrollbar-track {
+    background-color: transparent; }
+  html::-webkit-scrollbar-thumb {
+    background-color: #443; }
+
+section {
+  padding: 2rem 7%;
+  margin-bottom: 2rem;
+  border: 0.2rem solid #443; }
+  section:last-of-type {
+    margin-bottom: 0; }
+
+.btn {
+  display: inline-block;
+  padding: .9rem 1.5rem;
+  margin: 1rem 0 0;
+  cursor: pointer;
+  border: 0.2rem solid #443;
+  border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+  background: none;
+  font-size: 1.8rem;
+  color: #443; }
+  .btn:hover {
+    border: 0.2rem dashed #443;
+    border-radius: 4% 95% 6% 95%/95% 4% 92% 5%; }
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 101;
+  padding: 2rem 9%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  background-color: #FFF; }
+  .header .logo {
+    font-size: 2.5rem;
+    color: #443; }
+    .header .logo i {
+      padding-left: 0.5rem; }
+  .header .navbar a {
+    margin: 0 1rem;
+    position: relative;
+    font-size: 2.4rem;
+    color: #443; }
+    .header .navbar a:hover::after {
+      content: "";
+      position: absolute;
+      bottom: -20%;
+      left: 50%;
+      width: 70%;
+      transform: translateX(-50%);
+      height: .3rem;
+      background-color: tomato; }
+  .header .btn {
+    margin-top: 0; }
+
+#menuBtn {
+  display: none;
+  cursor: pointer;
+  font-size: 3rem;
+  color: #443; }
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%; }
+
+  .header {
+    padding: 2rem; } }
+@media (max-width: 768px) {
+  #menuBtn {
+    display: initial; }
+    #menuBtn.barRotate {
+      transform: rotate(-90deg); }
+
+  .header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background-color: rgba(238, 238, 238, 0.3);
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .5s ease; }
+    .header .navbar.userClick {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+    .header .navbar a {
+      display: block;
+      margin: 0;
+      padding: 1.5rem 2rem;
+      font-size: 2.2rem; }
+      .header .navbar a:hover {
+        background-color: #ddd; }
+      .header .navbar a:hover::after {
+        display: none; } }
+@media (max-width: 450) {
+  html {
+    font-size: 50%; } }
+
+/*# sourceMappingURL=style.css.map */

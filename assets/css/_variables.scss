@@ -1,0 +1,41 @@
+$black      : #222;
+$white      : #FFF;
+$lightBg    : #EEE;
+$lightColor : #666;
+
+$mainColor         : #443;
+$border            : .2rem solid $mainColor;
+$borderHover       : .2rem dashed $mainColor;
+$borderRadius      : 95% 4% 97% 5%/4% 94% 3% 95%;
+$borderRadiusHover : 4% 95% 6% 95%/95% 4% 92% 5%;
+$boxShadow         : 0 .5rem 1rem rgba(0, 0, 0, .1);
+
+
+@mixin grid($value) {
+    display              : grid;
+    grid-template-columns: repeat(auto-fit, minmax($value, 1fr));
+    gap                  : 2rem;
+}
+
+@mixin flex {
+    display  : flex;
+    flex-wrap: wrap;
+    gap      : 1rem;
+}
+
+@mixin titleText($fSize) {
+    color         : $black;
+    font-size     : $fSize;
+    text-transform: capitalize;
+}
+
+@mixin paragraph($font-size) {
+    color      : $black;
+    font-size  : $font-size;
+    line-height: 2;
+}
+
+@mixin fontStyle($size, $color) {
+    font-size: $size;
+    color    : $color;
+}
