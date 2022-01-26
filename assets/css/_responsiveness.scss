@@ -10,6 +10,10 @@
 
 @media (max-width: 768px) {
 
+    section {
+        padding: 2rem;
+    }
+
     #menuBtn {
         display: initial;
 
@@ -24,14 +28,14 @@
             top                : 100%;
             left               : 0;
             right              : 0;
-            background-color   : rgba(238, 238, 238, .3);
+            background-color   : rgba(238, 238, 238, .5);
             // transform       : scaleY(0);
             // transform-origin: top;
             clip-path          : polygon(0 0,
                     100% 0,
                     100% 0,
                     0 0);
-            transition: clip-path .5s ease;
+            transition: clip-path .2s ease;
 
             &.userClick {
                 // transform: scaleY(1);
@@ -58,8 +62,18 @@
         }
     }
 
+    .home {
+        text-align: center;
 
+        .row .content h3 {
+            padding-top: 4rem;
+            font-size  : 4rem;
+        }
 
+        .image-slider img {
+            height: 9rem;
+        }
+    }
 }
 
 @media (max-width: 450) {

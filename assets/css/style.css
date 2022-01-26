@@ -34,9 +34,8 @@ html {
     background-color: #443; }
 
 section {
-  padding: 2rem 7%;
-  margin-bottom: 2rem;
-  border: 0.2rem solid #443; }
+  padding: 2rem 9%;
+  margin-bottom: 2rem; }
   section:last-of-type {
     margin-bottom: 0; }
 
@@ -67,9 +66,10 @@ section {
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   background-color: #FFF; }
   .header .logo {
-    font-size: 2.5rem;
+    font-size: 3rem;
     color: #443; }
     .header .logo i {
+      font-size: 4rem;
       padding-left: 0.5rem; }
   .header .navbar a {
     margin: 0 1rem;
@@ -94,6 +94,47 @@ section {
   font-size: 3rem;
   color: #443; }
 
+.home {
+  min-height: 100vh;
+  padding-top: 12rem;
+  background: url(../img/home-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .home .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    align-items: center; }
+    .home .row .content {
+      flex: 1 1 42rem; }
+      .home .row .content h3 {
+        font-size: 6.5rem;
+        color: #443;
+        text-transform: uppercase; }
+    .home .row .image {
+      flex: 1 1 42rem;
+      padding-top: 10rem;
+      text-align: center; }
+      .home .row .image img {
+        height: 45rem;
+        animation: float 4s linear infinite; }
+  .home .image-slider {
+    text-align: center;
+    padding: 3rem 0; }
+    .home .image-slider img {
+      height: 12rem;
+      margin: 10rem .5rem 0;
+      cursor: pointer; }
+      .home .image-slider img:hover {
+        transform: translateY(-3rem);
+        transition: transform .3s linear; }
+
+@keyframes float {
+  0%,
+    100% {
+    transform: translateY(0rem); }
+  50% {
+    transform: translateY(-8rem); } }
 @media (max-width: 991px) {
   html {
     font-size: 55%; }
@@ -101,6 +142,9 @@ section {
   .header {
     padding: 2rem; } }
 @media (max-width: 768px) {
+  section {
+    padding: 2rem; }
+
   #menuBtn {
     display: initial; }
     #menuBtn.barRotate {
@@ -111,9 +155,9 @@ section {
     top: 100%;
     left: 0;
     right: 0;
-    background-color: rgba(238, 238, 238, 0.3);
+    background-color: rgba(238, 238, 238, 0.5);
     clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: clip-path .5s ease; }
+    transition: clip-path .2s ease; }
     .header .navbar.userClick {
       clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
     .header .navbar a {
@@ -124,7 +168,15 @@ section {
       .header .navbar a:hover {
         background-color: #ddd; }
       .header .navbar a:hover::after {
-        display: none; } }
+        display: none; }
+
+  .home {
+    text-align: center; }
+    .home .row .content h3 {
+      padding-top: 4rem;
+      font-size: 4rem; }
+    .home .image-slider img {
+      height: 9rem; } }
 @media (max-width: 450) {
   html {
     font-size: 50%; } }

@@ -46,9 +46,8 @@ html {
 }
 
 section {
-    padding      : 2rem 7%;
+    padding      : 2rem 9%;
     margin-bottom: 2rem;
-    border       : $border;
 
     &:last-of-type {
         margin-bottom: 0;
@@ -72,7 +71,7 @@ section {
 }
 
 @import 'header';
-// @import 'header';
+@import 'home';
 // @import 'header';
 // @import 'header';
 // @import 'header';

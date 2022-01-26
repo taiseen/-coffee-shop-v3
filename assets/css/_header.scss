@@ -12,9 +12,10 @@
     background-color: $white;
 
     .logo {
-        @include fontStyle(2.5rem, $mainColor);
+        @include fontStyle(3rem, $mainColor);
 
         i {
+            font-size   : 4rem;
             padding-left: 0.5rem;
         }
     }
@@ -44,7 +45,7 @@
 }
 
 #menuBtn {
-    display  : none;
-    cursor   : pointer;
+    display: none;
+    cursor : pointer;
     @include fontStyle(3rem, $mainColor);
 }
