@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
 
 /* 26 - Jan - 2022  */
 
@@ -11,7 +11,7 @@
     text-decoration   : none;
     text-transform    : capitalize;
     box-sizing        : border-box;
-    font-family       : 'Nunito', sans-serif;
+    font-family       : 'Poppins', sans-serif;
     transition        : all .1s linear;
     /* user-select    : none; */
 }
@@ -54,6 +54,27 @@ section {
     }
 }
 
+.heading {
+    @include fontStyle(9rem, transparent);
+    position           : relative;
+    text-align         : center;
+    text-transform     : uppercase;
+    letter-spacing     : .2rem;
+    pointer-events     : none;
+    -webkit-text-stroke: .05rem $mainColor;
+
+    span {
+        position : absolute;
+        top      : 50%;
+        left     : 50%;
+        width    : 100%;
+        transform: translate(-50%, -50%);
+        @include fontStyle(3rem, $mainColor);
+
+    }
+
+}
+
 .btn {
     display      : inline-block;
     padding      : .9rem 1.5rem;
@@ -72,7 +93,7 @@ section {
 
 @import 'header';
 @import 'home';
-// @import 'header';
+@import 'about';
 // @import 'header';
 // @import 'header';
 // @import 'header';

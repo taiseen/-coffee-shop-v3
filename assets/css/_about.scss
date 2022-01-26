@@ -1,0 +1,67 @@
+.about {
+
+    .row {
+        @include flex;
+        align-items: center;
+
+        .image {
+            flex: 1 1 42rem;
+
+            img {
+                width    : 90%;
+                animation: aboutImage 4s linear infinite;
+            }
+        }
+
+        .content {
+            flex: 1 1 42rem;
+
+            .title {
+                @include fontStyle(4rem, $mainColor);
+                line-height: 1.8;
+            }
+
+            p {
+                @include fontStyle(1.5rem, $mainColor);
+                line-height: 2;
+                padding    : 1rem 0;
+            }
+
+            .icons-container {
+                @include flex;
+                padding-top: 3rem;
+
+                .icons {
+                    flex         : 1 1 15rem;
+                    padding      : 2rem;
+                    text-align   : center;
+                    border       : $border;
+                    border-radius: $borderRadius;
+
+                    img {
+                        height: 5rem;
+                    }
+
+                    h3 {
+                        padding-top: 1rem;
+                        @include fontStyle(1.7rem, $mainColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes aboutImage {
+
+    0%,
+    100% {
+        transform    : scale(.9);
+        border-radius: $borderRadiusHover;
+    }
+
+    50% {
+        transform    : scale(.8);
+        border-radius: $borderRadius;
+    }
+}

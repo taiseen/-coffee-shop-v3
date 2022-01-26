@@ -26,7 +26,6 @@
 
             img {
                 height   : 45rem;
-                border   : 1px dotted rgba(238, 238, 238, .5);
                 animation: float 4s linear infinite;
             }
         }
@@ -39,7 +38,7 @@
 
         img {
             height       : 12rem;
-            margin       : 10rem .5rem 0;
+            margin       : 12rem .5rem 0;
             cursor       : pointer;
             border       : $borderHover;
             border-radius: $borderRadiusHover;

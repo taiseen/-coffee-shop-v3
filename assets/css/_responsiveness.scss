@@ -67,17 +67,26 @@
 
         .row {
             .content h3 {
-                padding-top: 1rem;
+                padding-top: 3rem;
                 font-size  : 4rem;
             }
-            .image img{
+
+            .image img {
                 height: 28rem;
             }
         }
 
         .image-slider img {
             height: 9rem;
-            margin: .5rem;
+            margin: 7rem 1rem 0;
+        }
+    }
+
+    .heading {
+        font-size: 6rem;
+
+        span {
+            font-size: 2.2rem;
         }
     }
 }
@@ -86,4 +95,10 @@
     html {
         font-size: 50%;
     }
+
+    .home .row .image img {
+        height: auto;
+        width : 100%;
+    }
+
 }
