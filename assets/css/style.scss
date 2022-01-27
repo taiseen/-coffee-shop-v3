@@ -70,35 +70,27 @@ section {
         width    : 100%;
         transform: translate(-50%, -50%);
         @include fontStyle(3rem, $mainColor);
-
     }
-
 }
 
 .btn {
-    display      : inline-block;
-    padding      : .9rem 1.5rem;
-    margin       : 1rem 0 0;
-    cursor       : pointer;
-    border       : $border;
-    border-radius: $borderRadius;
-    background   : none;
+    display   : inline-block;
+    padding   : .9rem 1.5rem;
+    margin    : 1rem 0 0;
+    cursor    : pointer;
+    background: none;
+    @include border;
     @include fontStyle(1.8rem, $mainColor);
 
     &:hover {
-        border       : $borderHover;
-        border-radius: $borderRadiusHover;
+        @include borderHover;
     }
 }
 
 @import 'header';
 @import 'home';
 @import 'about';
-// @import 'header';
-// @import 'header';
-// @import 'header';
-// @import 'header';
-// @import 'header';
-// @import 'header';
-// @import 'header';
+@import 'menu';
+@import 'review';
+@import 'book';
 @import 'responsiveness';

@@ -32,11 +32,10 @@
                 padding-top: 3rem;
 
                 .icons {
-                    flex         : 1 1 15rem;
-                    padding      : 2rem;
-                    text-align   : center;
-                    border       : $border;
-                    border-radius: $borderRadius;
+                    flex      : 1 1 15rem;
+                    padding   : 2rem;
+                    text-align: center;
+                    @include border;
 
                     img {
                         height: 5rem;

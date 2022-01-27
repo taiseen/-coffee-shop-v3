@@ -62,9 +62,9 @@ section {
   padding: .9rem 1.5rem;
   margin: 1rem 0 0;
   cursor: pointer;
+  background: none;
   border: 0.2rem solid #443;
   border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
-  background: none;
   font-size: 1.8rem;
   color: #443; }
   .btn:hover {
@@ -202,6 +202,97 @@ section {
   50% {
     transform: scale(0.8);
     border-radius: 95% 4% 97% 5%/4% 94% 3% 95%; } }
+.menu {
+  background: url(../img/menu-bg.jpg) no-repeat;
+  background-size: cover;
+  background-position: center; }
+  .menu .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    gap: 2rem;
+    justify-content: center; }
+    .menu .box-container .box {
+      border: 0.2rem solid #443;
+      border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+      flex: 1 1 42rem;
+      padding: 2rem;
+      margin-left: 6rem;
+      display: flex;
+      align-items: center;
+      gap: 1.5rem; }
+      .menu .box-container .box:hover {
+        border: 0.2rem dashed #443;
+        border-radius: 4% 95% 6% 95%/95% 4% 92% 5%; }
+      .menu .box-container .box img {
+        height: 8rem;
+        margin-left: -6rem; }
+      .menu .box-container .box .content h3 {
+        font-size: 2.2rem;
+        color: #443;
+        line-height: 1.8; }
+      .menu .box-container .box .content p {
+        font-size: 1.6rem;
+        color: #443;
+        line-height: 1.8;
+        padding: 1rem 0; }
+      .menu .box-container .box .content span {
+        font-size: 2rem;
+        color: #443;
+        line-height: 1.8;
+        font-weight: bolder; }
+
+.review .reviews-slider {
+  padding: 7rem 0; }
+  .review .reviews-slider .box {
+    border: 0.2rem solid #443;
+    border-radius: 95% 4% 97% 5%/4% 94% 3% 95%;
+    text-align: center;
+    position: relative;
+    padding: 2rem;
+    z-index: 0; }
+    .review .reviews-slider .box .fa-quote-left,
+    .review .reviews-slider .box .fa-quote-right {
+      position: absolute;
+      z-index: -1;
+      font-size: 6rem;
+      color: #CCC; }
+    .review .reviews-slider .box .fa-quote-left {
+      top: 2rem;
+      left: 2rem; }
+    .review .reviews-slider .box .fa-quote-right {
+      bottom: 2rem;
+      right: 2rem; }
+    .review .reviews-slider .box:hover .fa-quote-left {
+      top: -6.5rem; }
+    .review .reviews-slider .box:hover .fa-quote-right {
+      bottom: -6.5rem; }
+    .review .reviews-slider .box img {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 50%;
+      margin-bottom: .7rem; }
+    .review .reviews-slider .box .stars {
+      padding: 0.5rem 0; }
+      .review .reviews-slider .box .stars i {
+        font-size: 1.7rem;
+        color: #443; }
+    .review .reviews-slider .box p {
+      font-size: 1.6rem;
+      color: #443;
+      padding: 1rem 0;
+      line-height: 1.8; }
+    .review .reviews-slider .box h3 {
+      font-size: 2.2rem;
+      color: #443;
+      line-height: 1.8; }
+    .review .reviews-slider .box span {
+      font-size: 1.5rem;
+      color: #443; }
+  .review .reviews-slider .swiper-button-next,
+  .review .reviews-slider .swiper-button-prev {
+    color: #CCC; }
+
 @media (max-width: 991px) {
   html {
     font-size: 55%; }
@@ -223,10 +314,11 @@ section {
     left: 0;
     right: 0;
     background-color: #eee;
-    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-    transition: clip-path .2s ease; }
+    transform: scaleY(0);
+    transform-origin: top;
+    transition: transform .2s ease; }
     .header .navbar.userClick {
-      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%); }
+      transform: scaleY(1); }
     .header .navbar a {
       display: block;
       margin: 0;
@@ -251,7 +343,16 @@ section {
   .heading {
     font-size: 6rem; }
     .heading span {
-      font-size: 2.2rem; } }
+      font-size: 2.2rem; }
+
+  .menu .box-container .box {
+    margin-left: 0;
+    margin-top: 6rem;
+    flex-flow: column;
+    text-align: center; }
+    .menu .box-container .box img {
+      margin-left: 0;
+      margin-top: -6rem; } }
 @media (max-width: 450) {
   html {
     font-size: 50%; }

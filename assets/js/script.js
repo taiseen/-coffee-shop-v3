@@ -27,3 +27,39 @@ imageSlider.forEach(img => {
         imageShow.src = img.getAttribute('src');
     });
 });
+
+// swiper-slider functionality... 
+
+
+let swiper = new Swiper('.reviews-slider', {
+
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 20,
+
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+
+    pagination: {
+        el: '.swiper-pagination',
+        type: "fraction",
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+    },
+
+    breakpoints: {
+        0: {
+            slidesPerView: 1,
+        },
+        768: {
+            slidesPerView: 2,
+        },
+    },
+
+});

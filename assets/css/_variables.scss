@@ -1,6 +1,6 @@
 $black      : #222;
 $white      : #FFF;
-$lightBg    : #EEE;
+$deepWhite  : #CCC;
 $lightColor : #666;
 
 $mainColor         : #443;
@@ -10,6 +10,15 @@ $borderRadius      : 95% 4% 97% 5%/4% 94% 3% 95%;
 $borderRadiusHover : 4% 95% 6% 95%/95% 4% 92% 5%;
 $boxShadow         : 0 .5rem 1rem rgba(0, 0, 0, .1);
 
+@mixin border {
+    border       : $border;
+    border-radius: $borderRadius;
+}
+
+@mixin borderHover {
+    border       : $borderHover;
+    border-radius: $borderRadiusHover;
+}
 
 @mixin grid($value) {
     display              : grid;
@@ -23,16 +32,11 @@ $boxShadow         : 0 .5rem 1rem rgba(0, 0, 0, .1);
     gap      : 1.5rem;
 }
 
-@mixin titleText($fSize) {
-    color         : $black;
-    font-size     : $fSize;
-    text-transform: capitalize;
-}
+@mixin background($img) {
 
-@mixin paragraph($font-size) {
-    color      : $black;
-    font-size  : $font-size;
-    line-height: 2;
+    background         : url(../img/#{$img}-bg.jpg) no-repeat;
+    background-size    : cover;
+    background-position: center;
 }
 
 @mixin fontStyle($size, $color) {

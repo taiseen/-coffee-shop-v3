@@ -1,0 +1,49 @@
+.menu {
+    @include background(menu);
+
+    .box-container {
+        @include flex;
+        gap            : 2rem;
+        justify-content: center;
+
+        .box {
+            @include border;
+            flex       : 1 1 42rem;
+            padding    : 2rem;
+            margin-left: 6rem;
+            display    : flex;
+            align-items: center;
+            gap        : 1.5rem;
+
+            &:hover {
+                @include borderHover;
+            }
+
+            img {
+                height     : 8rem;
+                margin-left: -6rem;
+            }
+
+            .content {
+
+                h3 {
+                    @include fontStyle(2.2rem, $mainColor);
+                    line-height: 1.8;
+                }
+
+                p {
+                    @include fontStyle(1.6rem, $mainColor);
+                    line-height: 1.8;
+                    padding    : 1rem 0;
+                }
+
+                span {
+                    @include fontStyle(2rem, $mainColor);
+                    line-height: 1.8;
+                    font-weight: bolder;
+                }
+            }
+
+        }
+    }
+}

@@ -7,6 +7,7 @@
 ## Learning Context
 - SASS ==> variable , nesting , @mixing + @include , partials + @import
 - Side Toggle Menu Button 
+- Slider use by implementing Swiper-js
 - Responsiveness
 
 <img src="./assets/img/demo.png"/>

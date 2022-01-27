@@ -1,9 +1,7 @@
 .home {
-    min-height         : 100vh;
-    padding-top        : 12rem;
-    background         : url(../img/home-bg.jpg) no-repeat;
-    background-size    : cover;
-    background-position: center;
+    min-height : 100vh;
+    padding-top: 12rem;
+    @include background(home);
 
 
     .row {
@@ -37,11 +35,10 @@
         padding   : 3rem 0;
 
         img {
-            height       : 12rem;
-            margin       : 12rem .5rem 0;
-            cursor       : pointer;
-            border       : $borderHover;
-            border-radius: $borderRadiusHover;
+            height: 12rem;
+            margin: 12rem .5rem 0;
+            cursor: pointer;
+            @include borderHover;
 
             &:hover {
                 transform : translateY(-3rem);
