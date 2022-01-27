@@ -12,4 +12,4 @@ Inspire & Learning From ==> [this link](https://youtu.be/52sKmRsk7xU)
 - CSS Animation
 - text-stroke effect
 
-<img src="./assets/img/demo.png"/> 
+<img src="./assets/img/demo.jpg"/> 
