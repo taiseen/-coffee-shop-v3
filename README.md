@@ -2,12 +2,14 @@
 
 # Coffee Shop - v3 | [Live-Link](https://taiseen.github.io/coffee-shop-v3)
 
-## Inspire & Learning From ==> [this link](https://youtu.be/52sKmRsk7xU)
+Inspire & Learning From ==> [this link](https://youtu.be/52sKmRsk7xU)
 
 ## Learning Context
 - SASS ==> variable , nesting , @mixing + @include , partials + @import
 - Side Toggle Menu Button 
 - Slider use by implementing Swiper-js
 - Responsiveness
+- CSS Animation
+- text-stroke effect
 
-<img src="./assets/img/demo.png"/>
+<img src="./assets/img/demo.png"/> 

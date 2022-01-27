@@ -1,0 +1,38 @@
+.book {
+
+    @include background(book);
+
+    padding: 8rem 1rem;
+
+    form {
+        @include border;
+        padding       : 4rem;
+        margin        : 0 auto 2rem;
+        max-width     : 60rem;
+
+        &:hover {
+            @include borderHover;
+        }
+
+        .box {
+            @include border;
+            @include fontStyle(1.6rem, $mainColor);
+            width         : 100%;
+            padding       : 1rem 1.2rem;
+            margin        : .7rem 0;
+            background    : none;
+            text-transform: none;
+            border-radius : .5rem;
+
+            &:focus {
+                border: $borderHover;
+            }
+        }
+
+        textarea {
+            height: 15rem;
+            resize: none;
+        }
+    }
+
+}

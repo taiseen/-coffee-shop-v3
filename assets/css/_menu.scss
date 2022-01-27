@@ -5,6 +5,7 @@
         @include flex;
         gap            : 2rem;
         justify-content: center;
+        padding-bottom : 8rem;
 
         .box {
             @include border;

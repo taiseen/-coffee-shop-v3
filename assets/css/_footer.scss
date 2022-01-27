@@ -1,0 +1,48 @@
+.footer {
+
+    .box-container {
+
+        @include grid(23rem);
+
+        .box {
+            &:nth-of-type(3) {
+                a:nth-of-type(2) {
+                    text-transform: lowercase;
+                }
+            }
+
+            h3 {
+                padding-left: 1rem 0;
+                @include fontStyle(2.5rem, $mainColor);
+            }
+
+            a {
+                display: block;
+                padding: .5rem 0;
+                @include fontStyle(1.5rem, $mainColor);
+
+                &:hover i {
+                    padding-right: 1.2rem;
+                }
+
+                i {
+                    padding-right: .5rem;
+                }
+            }
+
+
+        }
+    }
+
+    .credit {
+        text-align: center;
+        padding   : 2rem 1rem;
+        margin-top: 1rem;
+        @include fontStyle(2rem, $mainColor);
+
+        span {
+            border-bottom: $borderHover;
+        }
+    }
+
+}

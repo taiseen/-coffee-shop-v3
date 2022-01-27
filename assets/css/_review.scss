@@ -69,11 +69,9 @@
         .swiper-button-prev {
             color: $deepWhite;
         }
+
+        .swiper-pagination-horizontal {
+            @include fontStyle(2rem, $mainColor);
+        }
     }
-}
-
-.swiper-pagination .swiper-pagination-fraction .swiper-pagination-horizontal {
-
-    // height: 1.5rem;
-    // width : 1.5rem;
 }
